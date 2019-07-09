@@ -1143,6 +1143,9 @@ namespace UnrealBuildTool
 			// Setup the compile environment for the module.
 			SetupPrivateCompileEnvironment(Result.UserIncludePaths, Result.SystemIncludePaths, Result.Definitions, Result.AdditionalFrameworks, (Rules != null)? Rules.bLegacyPublicIncludePaths.Value : true);
 
+            // Add Compile Options
+            Result.CompileOptions = Rules.CompileOptions;
+
 			return Result;
 		}
 

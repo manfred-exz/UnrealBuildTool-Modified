@@ -338,10 +338,15 @@ namespace UnrealBuildTool
 		/// </summary>
 		public List<string> Definitions = new List<string>();
 
-		/// <summary>
-		/// Additional arguments to pass to the compiler.
-		/// </summary>
-		public string AdditionalArguments = "";
+        /// <summary>
+        /// Public compiler definitions for this module
+        /// </summary>
+        public List<string> CompileOptions = new List<string>();
+
+        /// <summary>
+        /// Additional arguments to pass to the compiler.
+        /// </summary>
+        public string AdditionalArguments = "";
 
 		/// <summary>
 		/// A list of additional frameworks whose include paths are needed.
@@ -366,7 +371,7 @@ namespace UnrealBuildTool
 		/// <summary>
 		/// Which C++ standard to support. May not be compatible with all platforms.
 		/// </summary>
-		public CppStandardVersion CppStandard = CppStandardVersion.Default;
+		public CppStandardVersion CppStandard = CppStandardVersion.Latest;
 
 		/// <summary>
 		/// Default constructor.
@@ -434,6 +439,7 @@ namespace UnrealBuildTool
 			bCheckSystemHeadersForModification = Other.bCheckSystemHeadersForModification;
 			ForceIncludeFiles.AddRange(Other.ForceIncludeFiles);
 			Definitions.AddRange(Other.Definitions);
+            CompileOptions.AddRange(Other.CompileOptions);
 			AdditionalArguments = Other.AdditionalArguments;
 			AdditionalFrameworks.AddRange(Other.AdditionalFrameworks);
 			PrecompiledHeaderFile = Other.PrecompiledHeaderFile;

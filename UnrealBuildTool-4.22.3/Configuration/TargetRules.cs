@@ -1008,7 +1008,7 @@ namespace UnrealBuildTool
 		/// </summary>
 		[RequiresUniqueBuildEnvironment]
 		[XmlConfigFile(Category = "BuildConfiguration")]
-		public CppStandardVersion CppStandard = CppStandardVersion.Default;
+		public CppStandardVersion CppStandard = CppStandardVersion.Latest;
 
 		/// <summary>
 		/// Do not allow manifest changes when building this target. Used to cause earlier errors when building multiple targets with a shared build environment.

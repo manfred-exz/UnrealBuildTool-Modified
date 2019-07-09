@@ -659,6 +659,11 @@ namespace UnrealBuildTool
 		public List<string> PublicDefinitions = new List<string>();
 
 		/// <summary>
+		/// Public compiler definitions for this module
+		/// </summary>
+		public List<string> CompileOptions = new List<string>();
+
+		/// <summary>
 		/// Addition modules this module may require at run-time 
 		/// </summary>
 		public List<string> DynamicallyLoadedModuleNames = new List<string>();
@@ -707,7 +712,7 @@ namespace UnrealBuildTool
 		/// <summary>
 		/// Which stanard to use for compiling this module
 		/// </summary>
-		public CppStandardVersion CppStandard = CppStandardVersion.Default;
+		public CppStandardVersion CppStandard = CppStandardVersion.Latest;
 
 		/// <summary>
 		/// The current engine directory

@@ -495,6 +495,8 @@ namespace UnrealBuildTool
 					Arguments.Add("/w44668");
 				}
 			}
+
+            Arguments.AddRange(CompileEnvironment.CompileOptions);
 		}
 
 		void AppendCLArguments_CPP(CppCompileEnvironment CompileEnvironment, List<string> Arguments)
@@ -541,7 +543,7 @@ namespace UnrealBuildTool
 			if (Target.WindowsPlatform.Compiler != WindowsCompiler.Intel)
 			{
 				// Restrictive during regular compilation.
-				Arguments.Add("/W4");
+				Arguments.Add("/W3");
 			}
 			else
 			{
